@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASHFAQUE</title>
+  <meta name="description" content="Editorial Model Portfolio featuring photographic silhouettes, kinetic typography, and scroll choreography powered by StringTune.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='' viewBox='0 0 100 100'><rect width='100' height='100' fill='black'/><text y='70' x='50' text-anchor='middle' font-family='sans-serif' font-size='60' font-weight='bold' fill='white'>L</text></svg>">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="loader.css?v=2">
+  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="FlexCarousel.css">
+  
+  <!-- GSAP Core for Initial Cinematic Loader -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       ASHFAQUE CINEMATIC INTRO / LOADING ANIMATION COMPONENT
+       Blue-gradient kinetic letter assembly into "ASHFAQUE"
+       ========================================================================= -->
+  <div id="luka-loader" class="luka-loader" role="status" aria-label="Loading ASHFAQUE Editorial">
+    <!-- Dynamic blue gradient and original flying-letter name assembly -->
+    <div class="luka-loader-bg">
+      <div class="luka-glow-orb luka-glow-orb-1"></div>
+      <div class="luka-glow-orb luka-glow-orb-2"></div>
+      <div class="luka-glow-orb luka-glow-orb-3"></div>
+    </div>
+    <div class="luka-loader-noise"></div>
+    <div class="luka-loader-stage">
+      <div class="luka-target-word" aria-hidden="true"></div>
+      <div class="luka-flying-letters" aria-hidden="true"></div>
+    </div>
+  </div>
+  <script src="loader.js?v=2"></script>
+
+  <!-- =========================================================================
+       HERO: Model Cutout on Left, Opposing Text Movement Behind Subject
+       ========================================================================= -->
+  <section class="hero-track" id="hero" string="progress" string-id="hero-track" aria-label="Hero Section">
+    <div class="hero-sticky-canvas">
+      
+      <!-- Floating navigation styled after the supplied reference -->
+      <header class="site-nav" role="banner">
+        <a href="https://www.instagram.com/ashfaque.ee/" class="nav-brand" target="_blank" rel="noreferrer" aria-label="Instagram: ashfaque.ee">ashfaque.ee</a>
+        <nav class="nav-pill" aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#intro-section">ABOUT ME</a></li>
+            <li><a href="#portraits-section">PROJECTS</a></li>
+            <li><a href="#standing-section">LANDING PAGES</a></li>
+            <li><a href="#runway-section">SERVICES</a></li>
+          </ul>
+        </nav>
+        <div class="nav-socials" aria-label="Social profiles">
+          <a class="nav-social-icon instagram-icon" href="https://www.instagram.com/ashfaque.ee/" target="_blank" rel="noreferrer" aria-label="Instagram: ashfaque.ee">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-dot" cx="17.6" cy="6.7" r="1"/></svg>
+          </a>
+          <a class="nav-social-icon behance-icon" href="https://www.behance.net/muhammeashfaqu10" target="_blank" rel="noreferrer" aria-label="Behance">Bē</a>
+          <a class="nav-social-icon linkedin-icon" href="https://www.linkedin.com/in/ashfaque-m-17457a39b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+        </div>
+      </header>
+      
+      <!-- Typography Layer: Sits behind model cutout in foreground -->
+      <div class="hero-typography-layer" aria-hidden="true">
+        
+        <!-- Row 1: Main Name ” Moves LEFT on scroll -->
+        <div class="hero-text-row-main" id="hero-main-row">
+          <div class="hero-name-marquee">
+            <div class="hero-name-group">
+              <span class="hero-title-main">ASHFAQUE</span>
+              <span class="hero-title-main">ASHFAQUE</span>
+              <span class="hero-title-main">ASHFAQUE</span>
+            </div>
+            <div class="hero-name-group" aria-hidden="true">
+              <span class="hero-title-main">ASHFAQUE</span>
+              <span class="hero-title-main">ASHFAQUE</span>
+              <span class="hero-title-main">ASHFAQUE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Secondary Text â€” Moves RIGHT on scroll -->
+        <div class="hero-text-row-sub" id="hero-sub-row">
+          <div class="hero-sub-marquee">
+            <div class="hero-sub-group">
+              <span class="hero-title-sub">GRAPHIC DESIGNER</span>
+              <span class="hero-title-sub">UIUX DESIGNER</span>
+              <span class="hero-title-sub">VIDEO EDITER</span>
+              <span class="hero-title-sub">BRANDING</span>
+            </div>
+            <div class="hero-sub-group" aria-hidden="true">
+              <span class="hero-title-sub">GRAPHIC DESIGNER</span>
+              <span class="hero-title-sub">UIUX DESIGNER</span>
+              <span class="hero-title-sub">VIDEO EDITER</span>
+              <span class="hero-title-sub">BRANDING</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Foreground Model Cutout: Anchored on the Left -->
+      <div class="hero-model-container" id="hero-model">
+        <picture>
+          <img 
+            src="images/ashfaque-home-portrait.png" 
+            alt="ASHFAQUE seated in a chair wearing a black T-shirt and light jeans" 
+            class="hero-model-cutout"
+            width="896" 
+            height="1280" 
+            loading="eager" 
+            fetchpriority="high"
+          >
+        </picture>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       EDITORIAL PHOTOGRAPHIC JOURNEY
+       ========================================================================= -->
+  <main class="editorial-journey" id="editorial-work">
+
+    <!-- SECTION 01: ABOUT ME -->
+    <section class="scene-track intro-track" id="intro-section" string="progress" string-id="intro-section" aria-label="About Ashfaque">
+      <div class="scene-sticky-frame">
+        <div class="intro-canvas">
+          <div class="intro-center-stage">
+            <div class="intro-image-wrap" id="intro-img">
+              <img 
+                src="images/ashfaque-home-portrait.png" 
+                alt="ASHFAQUE seated in a chair wearing a black T-shirt and light jeans" 
+                class="intro-cutout-photo"
+                width="896" 
+                height="1280" 
+                loading="lazy"
+              >
+            </div>
+
+            <div class="intro-specs-below" id="intro-specs">
+              <h2 class="intro-model-name">ABOUT ME</h2>
+              <p class="intro-about-copy">I'm a UI/UX and Visual Designer with a passion for creating meaningful digital experiences and thoughtful brand identities. With hands-on experience in Figma, wireframing, prototyping, graphic design and visual storytelling, I enjoy turning ideas into clear, engaging and user-friendly designs. I also bring a data-informed perspective to my creative process, combining research, functionality and aesthetics to create designs that connect with people.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 02: PORTRAIT PHOTOS COLLECTION (ALL 6 WHOLE PHOTOS)
+         Single scroll step transitions photo & description in sync
+         ======================================================================= -->
+    <!-- =======================================================================
+         SECTION 02: PORTRAIT PHOTOS (ALL 6 WHOLE PHOTOS VIA FLEX CAROUSEL)
+         Interactive WebGL Liquid FlexCarousel with 'deal' entrance
+         ======================================================================= -->
+    <section class="editorial-carousel-section" id="portraits-section" aria-label="Project Portfolio">
+      <div class="carousel-section-container">
+        <div class="carousel-section-header">
+          <h2 class="carousel-section-title">PROJECT</h2>
+        </div>
+        
+        <div id="portraits-carousel" class="flex-carousel-host" style="width: 100%; height: 560px; position: relative;">
+          <div class="project-gallery-fallback" aria-label="Selected projects">
+            <div class="project-gallery-track">
+              <div class="project-gallery-group">
+                <a class="project-gallery-link" href="https://www.behance.net/gallery/253218093/zento" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/zentro-branding.jpeg" alt="Zentro brand identity on a blue and white cityscape design"><figcaption>ZENTRO</figcaption></figure></a>
+                <a class="project-gallery-link" href="https://www.behance.net/gallery/257970221/NIKE-DASHBOARD" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/nike-campaign.jpeg" alt="Monochrome Nike Air campaign with suspended sneakers"><figcaption>NIKE</figcaption></figure></a>
+                <a class="project-gallery-link" href="https://www.behance.net/gallery/257967849/FARMORA" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/farmora-branding.jpeg" alt="Farmora green agricultural brand illustration"><figcaption>FARMORA</figcaption></figure></a>
+                <a class="project-gallery-link" href="https://www.behance.net/gallery/257969699/BREWORA" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/brewora-branding.jpeg" alt="Brewora coffee and croissant brand campaign"><figcaption>BREWORA</figcaption></figure></a>
+              </div>
+              <div class="project-gallery-group" aria-hidden="true">
+                <figure class="project-gallery-card"><img src="images/projects/zentro-branding.jpeg" alt=""><figcaption>ZENTRO</figcaption></figure>
+                <figure class="project-gallery-card"><img src="images/projects/nike-campaign.jpeg" alt=""><figcaption>NIKE</figcaption></figure>
+                <figure class="project-gallery-card"><img src="images/projects/farmora-branding.jpeg" alt=""><figcaption>FARMORA</figcaption></figure>
+                <figure class="project-gallery-card"><img src="images/projects/brewora-branding.jpeg" alt=""><figcaption>BREWORA</figcaption></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 03: LANDING PAGES
+         ======================================================================= -->
+    <section class="editorial-carousel-section landing-pages-section" id="standing-section" string="progress" string-id="standing-section" aria-label="Landing Pages">
+      <div class="carousel-section-container">
+        <div class="carousel-section-header">
+          <h2 class="carousel-section-title">LANDING PAGES</h2>
+        </div>
+        <div class="landing-fan" aria-label="Landing page and UI design projects">
+          <a class="landing-fan-card" style="--fan-x:-28vw;--fan-y:12px;--fan-angle:-40deg;--fan-order:1" href="https://www.behance.net/gallery/257968779/ZENTRO" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/zentro-trifold-brochure.jpeg" alt="Zentro recruitment brochure mockup on a blue background"><figcaption>ZENTRO — TRIFOLD BROCHURE</figcaption></figure></a>
+          <a class="landing-fan-card" style="--fan-x:-20vw;--fan-y:-55px;--fan-angle:-30deg;--fan-order:2" href="https://www.behance.net/gallery/257968779/ZENTRO" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/zentro-magazine.jpeg" alt="Zentro workforce magazine and brochure mockups"><figcaption>ZENTRO — MAGAZINE DESIGN</figcaption></figure></a>
+          <a class="landing-fan-card" style="--fan-x:-12vw;--fan-y:-105px;--fan-angle:-20deg;--fan-order:3" href="https://www.behance.net/gallery/257969699/BREWORA" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/brewora-website.jpeg" alt="Brewora coffee shop website shown on a laptop"><figcaption>BREWORA — WEBSITE DESIGN</figcaption></figure></a>
+          <a class="landing-fan-card" style="--fan-x:-4vw;--fan-y:-140px;--fan-angle:-10deg;--fan-order:4" href="https://www.behance.net/gallery/257970221/NIKE-DASHBOARD" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/nike-dashboard.jpeg" alt="Nike store analytics dashboard displayed on a laptop"><figcaption>NIKE — DASHBOARD UI</figcaption></figure></a>
+          <div class="landing-fan-card" style="--fan-x:4vw;--fan-y:-140px;--fan-angle:10deg;--fan-order:5"><figure><img src="images/landing-pages/worker-app-mockup.jpeg" alt="Skilled worker booking app shown on an angled phone mockup"><figcaption>SKILLED WORKERS — APP DESIGN</figcaption></figure></div>
+          <div class="landing-fan-card" style="--fan-x:12vw;--fan-y:-105px;--fan-angle:20deg;--fan-order:6"><figure><img src="images/landing-pages/worker-app-screen.jpeg" alt="Skilled worker services app home screen"><figcaption>SKILLED WORKERS — MOBILE UI</figcaption></figure></div>
+          <a class="landing-fan-card" style="--fan-x:20vw;--fan-y:-55px;--fan-angle:30deg;--fan-order:7" href="https://www.behance.net/gallery/257967849/FARMORA" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/farmora-app.jpeg" alt="Farmora agriculture shopping app on two phones"><figcaption>FARMORA — APP DESIGN</figcaption></figure></a>
+          <a class="landing-fan-card" style="--fan-x:28vw;--fan-y:12px;--fan-angle:40deg;--fan-order:8" href="https://www.behance.net/gallery/253218093/zento" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/zentro-brand-guidelines.jpeg" alt="Zentro brand guidelines cover in blue"><figcaption>ZENTRO — BRAND GUIDELINES</figcaption></figure></a>
+        </div>
+      </div>
+    </section>
+    <!-- =======================================================================
+         SECTION 04: SERVICES
+         ======================================================================= -->
+    <section class="editorial-carousel-section services-section" id="runway-section" string="progress" string-id="runway-section" aria-label="Services">
+      <div class="carousel-section-container">
+        <header class="services-heading">
+          <h2>THE SERVICES WE PROVIDE</h2>
+          <p>Creating visually appealing and functional digital experiences tailored to each project, with a consistent user experience across platforms.</p>
+        </header>
+        <div class="services-accordion">
+          <details class="service-accordion-item">
+            <summary><span class="service-number">1</span><span class="service-title">UI/UX</span><span class="service-chevron" aria-hidden="true"></span></summary>
+            <div class="service-panel">
+              <p>User-centered research, wireframing, and prototyping turn complex ideas into clear, useful digital experiences.</p>
+              <div class="service-panel-footer"><span>DELIVERABLES: RESEARCH, USER FLOWS, WIREFRAMES, PROTOTYPES, INTERFACE DESIGN</span><button class="service-contact-trigger" type="button" data-contact-open="UI/UX Design">CONTACT</button></div>
+            </div>
+          </details>
+          <details class="service-accordion-item">
+            <summary><span class="service-number">2</span><span class="service-title">WEB DESIGN</span><span class="service-chevron" aria-hidden="true"></span></summary>
+            <div class="service-panel">
+              <p>Responsive websites that bring a brand to life with clear structure, strong visuals, and easy navigation.</p>
+              <div class="service-panel-footer"><span>DELIVERABLES: SITE STRUCTURE, RESPONSIVE LAYOUTS, WEB GRAPHICS, DESIGN SYSTEMS</span><button class="service-contact-trigger" type="button" data-contact-open="Web Design">CONTACT</button></div>
+            </div>
+          </details>
+          <details class="service-accordion-item" open>
+            <summary><span class="service-number">3</span><span class="service-title">BRANDING</span><span class="service-chevron" aria-hidden="true"></span></summary>
+            <div class="service-panel">
+              <p>Distinctive brand identities built to communicate your story with clarity and consistency across digital and print touchpoints.</p>
+              <div class="service-panel-footer"><span>DELIVERABLES: LOGO SYSTEMS, COLOR &amp; TYPE, BRAND GUIDELINES, GRAPHIC DESIGN</span><button class="service-contact-trigger" type="button" data-contact-open="Branding">CONTACT</button></div>
+            </div>
+          </details>
+          <details class="service-accordion-item">
+            <summary><span class="service-number">4</span><span class="service-title">VIDEO EDITING</span><span class="service-chevron" aria-hidden="true"></span></summary>
+            <div class="service-panel">
+              <p>Purposeful edits combine pacing, imagery, and sound to create engaging stories for digital platforms.</p>
+              <div class="service-panel-footer"><span>DELIVERABLES: VIDEO EDITING, SOCIAL CUTDOWNS, TITLES, MOTION GRAPHICS</span><button class="service-contact-trigger" type="button" data-contact-open="Video Editing">CONTACT</button></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CONTACT FOOTER -->
+  <footer class="site-footer" id="footer" string="progress" string-id="footer-section" role="contentinfo" aria-label="Contact and social links">
+    <div class="footer-name-wrap" id="footer-wrap">
+      <h2 class="footer-lets-talk">LET'S TALK</h2>
+      <nav class="footer-social-links" aria-label="Social links">
+        <a href="https://www.instagram.com/ashfaque.ee/" target="_blank" rel="noreferrer">INSTAGRAM</a>
+        <a class="behance-link" href="https://www.behance.net/muhammeashfaqu10" target="_blank" rel="noreferrer">BEHANCE</a>
+        <a href="https://www.linkedin.com/in/ashfaque-m-17457a39b/" target="_blank" rel="noreferrer">LINKEDIN</a>
+        <button type="button" data-contact-open="UI/UX Design">CONTACT ME</button>
+      </nav>
+      <div class="footer-bottom-line">
+        <span>PORTFOLIO. ALL RIGHTS RESERVED</span>
+        <span>DESIGN BY ASHFAQUE</span>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title">
+    <div class="contact-dialog-content">
+      <header class="contact-dialog-header">
+        <div>
+          <span class="contact-eyebrow">START A CONVERSATION</span>
+          <h2 id="contact-title">LET'S BUILD SOMETHING</h2>
+        </div>
+        <button class="contact-close" type="button" aria-label="Close contact form">×</button>
+      </header>
+      <form class="contact-form" id="contact-form">
+        <label for="contact-name">YOUR NAME</label>
+        <input id="contact-name" name="name" type="text" placeholder="John Doe" autocomplete="name" required>
+
+        <label for="contact-email">EMAIL ADDRESS</label>
+        <input id="contact-email" name="email" type="email" placeholder="john@company.com" autocomplete="email" required>
+
+        <label for="contact-service">SERVICE REQUIRED</label>
+        <select id="contact-service" name="service" required>
+          <option>UI/UX Design</option>
+          <option>Web Design</option>
+          <option>Branding</option>
+          <option>Video Editing</option>
+        </select>
+
+        <label for="contact-message">MESSAGE</label>
+        <textarea id="contact-message" name="message" placeholder="Tell me about your project, goals, and timeline..." required></textarea>
+
+        <button class="contact-submit" type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- GSAP, ScrollTrigger & Lenis for ParallaxComponent -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+  <script src="contact.js" defer></script>
+
+  <!-- Application Motion Controller -->
+  <script type="module" src="main.js?v=5"></script>
+
+</body>
+</html>
