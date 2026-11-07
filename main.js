@@ -10,8 +10,6 @@
  * Minimal Footer
  */
 
-import { initFlexCarousel } from './flex-carousel.js';
-
 // ============================================================================
 // CONFIGURABLE MODEL SETTINGS
 // ============================================================================
@@ -133,8 +131,11 @@ async function initPortfolio() {
     if (landingSection) landingSection.classList.add('is-motion-ready');
 
     const revealLandingFan = () => {
-      landingFan.classList.add('is-fanned');
       if (landingSection) landingSection.classList.add('is-visible');
+      // Commit the hidden starting pose before switching into the settled grid.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => landingFan.classList.add('is-fanned'));
+      });
     };
 
     document.body.classList.add('landing-motion-ready');
@@ -285,24 +286,55 @@ async function initPortfolio() {
   // Section 02: Portraits Collection (FlexCarousel Host)
   const portraitsEl = document.getElementById('portraits-carousel');
   if (portraitsEl) {
-    try {
-      initFlexCarousel(portraitsEl, {
-        items: portraitItems,
-        preset: 'liquid',
-        intro: 'deal',
-        cardHeight: 0.5,
-        gap: 12,
-        squeeze: 0.2,
-        focusOnClick: true,
-        captions: true,
-        onSelect: (_index, item) => {
-          if (item?.href) window.open(item.href, '_blank', 'noopener,noreferrer');
-        }
+    const galleryGroup = portraitsEl.querySelector('.project-gallery-group');
+    const projectLinks = Array.from(galleryGroup?.querySelectorAll('.project-gallery-link') || []);
+    let projectTimer;
+
+    const setFeaturedProject = (featuredLink) => {
+      if (!galleryGroup || !featuredLink || !projectLinks.length) return;
+
+      const featuredIndex = projectLinks.indexOf(featuredLink);
+      const positions = ['far-left', 'left', 'center', 'right', 'far-right'];
+      projectLinks.forEach((link, index) => {
+        const offset = ((index - featuredIndex + projectLinks.length / 2) % projectLinks.length + projectLinks.length) % projectLinks.length - projectLinks.length / 2;
+        const positionIndex = Math.round(offset + 2);
+        link.dataset.position = positions[positionIndex] || 'center';
+        link.classList.toggle('is-featured', link === featuredLink);
       });
-    } catch (error) {
-      portraitsEl.classList.remove('has-webgl');
-      console.warn('[Projects] Using CSS gallery fallback:', error);
+    };
+
+    const featureNextProject = () => {
+      const currentIndex = projectLinks.findIndex((link) => link.classList.contains('is-featured'));
+      const nextIndex = (currentIndex + 1) % projectLinks.length;
+      setFeaturedProject(projectLinks[nextIndex]);
+    };
+
+    const restartProjectTimer = () => {
+      window.clearInterval(projectTimer);
+      projectTimer = window.setInterval(featureNextProject, 2000);
+    };
+
+    if (projectLinks.length) {
+      setFeaturedProject(projectLinks[0]);
+      restartProjectTimer();
+
+      portraitsEl.addEventListener('mouseenter', () => window.clearInterval(projectTimer));
+      portraitsEl.addEventListener('mouseleave', restartProjectTimer);
+      portraitsEl.addEventListener('focusin', () => window.clearInterval(projectTimer));
+      portraitsEl.addEventListener('focusout', restartProjectTimer);
+
+      galleryGroup.addEventListener('click', (event) => {
+        const clickedLink = event.target.closest('.project-gallery-link');
+        if (!clickedLink || clickedLink.classList.contains('is-featured')) return;
+
+        event.preventDefault();
+        window.clearInterval(projectTimer);
+        setFeaturedProject(clickedLink);
+        restartProjectTimer();
+      });
     }
+
+    portraitsEl.classList.add('project-gallery-ready');
   }
 
   // Section 03: Standing Poses Spatial Showcase (StringTune Scroll-Driven)

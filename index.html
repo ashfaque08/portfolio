@@ -14,8 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="loader.css?v=2">
-  <link rel="stylesheet" href="style.css?v=8">
-  <link rel="stylesheet" href="FlexCarousel.css">
+  <link rel="stylesheet" href="style.css?v=14">
+  <link rel="stylesheet" href="FlexCarousel.css?v=6">
   
   <!-- GSAP Core for Initial Cinematic Loader -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -137,8 +137,8 @@
           <div class="intro-center-stage">
             <div class="intro-image-wrap" id="intro-img">
               <img 
-                src="images/ashfaque-home-portrait.png" 
-                alt="ASHFAQUE seated in a chair wearing a black T-shirt and light jeans" 
+                src="images/about-suit.png" 
+                alt="ASHFAQUE wearing a navy suit and white shirt" 
                 class="intro-cutout-photo"
                 width="896" 
                 height="1280" 
@@ -149,6 +149,13 @@
             <div class="intro-specs-below" id="intro-specs">
               <h2 class="intro-model-name">ABOUT ME</h2>
               <p class="intro-about-copy">I'm a UI/UX and Visual Designer with a passion for creating meaningful digital experiences and thoughtful brand identities. With hands-on experience in Figma, wireframing, prototyping, graphic design and visual storytelling, I enjoy turning ideas into clear, engaging and user-friendly designs. I also bring a data-informed perspective to my creative process, combining research, functionality and aesthetics to create designs that connect with people.</p>
+              <div class="software-tools" aria-label="Design and video software">
+                <div class="software-tool"><span class="software-tool-icon software-tool-ps" aria-hidden="true">Ps</span><span>Photoshop</span></div>
+                <div class="software-tool"><span class="software-tool-icon software-tool-ai" aria-hidden="true">Ai</span><span>Illustrator</span></div>
+                <div class="software-tool"><span class="software-tool-icon software-tool-figma" aria-hidden="true"><svg viewBox="0 0 24 36" focusable="false"><path fill="#f24e1e" d="M6 0h6v12H6a6 6 0 0 1 0-12Z"/><path fill="#ff7262" d="M12 0h6a6 6 0 0 1 0 12h-6Z"/><path fill="#a259ff" d="M6 12h6v12H6a6 6 0 0 1 0-12Z"/><circle cx="15" cy="18" r="6" fill="#1abcfe"/><path fill="#0acf83" d="M6 24h6v6a6 6 0 1 1-6-6Z"/></svg></span><span>Figma</span></div>
+                <div class="software-tool"><span class="software-tool-icon software-tool-pr" aria-hidden="true">Pr</span><span>Premiere Pro</span></div>
+                <div class="software-tool"><span class="software-tool-icon software-tool-resolve" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><circle cx="16" cy="6" r="5" fill="#ef3e36"/><circle cx="25" cy="11" r="5" fill="#f7941d"/><circle cx="25" cy="21" r="5" fill="#f9ed32"/><circle cx="16" cy="26" r="5" fill="#00a651"/><circle cx="7" cy="21" r="5" fill="#00aeef"/><circle cx="7" cy="11" r="5" fill="#652d90"/><circle cx="16" cy="16" r="4" fill="#fff"/></svg></span><span>DaVinci Resolve</span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -173,16 +180,11 @@
           <div class="project-gallery-fallback" aria-label="Selected projects">
             <div class="project-gallery-track">
               <div class="project-gallery-group">
-                <a class="project-gallery-link" href="https://www.behance.net/gallery/253218093/zento" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/zentro-branding.jpeg" alt="Zentro brand identity on a blue and white cityscape design"><figcaption>ZENTRO</figcaption></figure></a>
-                <a class="project-gallery-link" href="https://www.behance.net/gallery/257970221/NIKE-DASHBOARD" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/nike-campaign.jpeg" alt="Monochrome Nike Air campaign with suspended sneakers"><figcaption>NIKE</figcaption></figure></a>
-                <a class="project-gallery-link" href="https://www.behance.net/gallery/257967849/FARMORA" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/farmora-branding.jpeg" alt="Farmora green agricultural brand illustration"><figcaption>FARMORA</figcaption></figure></a>
-                <a class="project-gallery-link" href="https://www.behance.net/gallery/257969699/BREWORA" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/brewora-branding.jpeg" alt="Brewora coffee and croissant brand campaign"><figcaption>BREWORA</figcaption></figure></a>
-              </div>
-              <div class="project-gallery-group" aria-hidden="true">
-                <figure class="project-gallery-card"><img src="images/projects/zentro-branding.jpeg" alt=""><figcaption>ZENTRO</figcaption></figure>
-                <figure class="project-gallery-card"><img src="images/projects/nike-campaign.jpeg" alt=""><figcaption>NIKE</figcaption></figure>
-                <figure class="project-gallery-card"><img src="images/projects/farmora-branding.jpeg" alt=""><figcaption>FARMORA</figcaption></figure>
-                <figure class="project-gallery-card"><img src="images/projects/brewora-branding.jpeg" alt=""><figcaption>BREWORA</figcaption></figure>
+                <a class="project-gallery-link is-featured" data-position="center" href="https://www.behance.net/gallery/257969699/BREWORA" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/brewora-website-showcase.jpeg" alt="Brewora coffee website UI and UX showcase"><figcaption><span>BREWORA</span><span class="project-gallery-type">Website</span></figcaption></figure></a>
+                <a class="project-gallery-link" data-position="right" href="https://www.behance.net/gallery/253218093/zento" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/zentro-mobile-showcase.jpeg" alt="Zentro mobile UI and UX showcase with two connected device mockups"><figcaption><span>ZENTRO</span><span class="project-gallery-type">Mobile</span></figcaption></figure></a>
+                <a class="project-gallery-link" data-position="far-right" href="https://www.behance.net/gallery/257970221/NIKE-DASHBOARD" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/nike-dashboard-showcase.jpeg" alt="Nike performance insights dashboard UI and UX showcase with Air Force sneakers"><figcaption><span>NIKE</span><span class="project-gallery-type">Dashboard</span></figcaption></figure></a>
+                <a class="project-gallery-link" data-position="far-left" href="https://www.behance.net/gallery/257967849/FARMORA" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/farmora-uiux-showcase.jpeg" alt="Farmora agriculture app UI and UX showcase with two phone mockups"><figcaption><span>FARMORA</span><span class="project-gallery-type">Mobile app</span></figcaption></figure></a>
+                <a class="project-gallery-link" data-position="left" href="https://www.behance.net/gallery/257968779/ZENTRO" target="_blank" rel="noreferrer"><figure class="project-gallery-card"><img src="images/projects/zentro-brand-guidelines-showcase.jpeg" alt="Zentro brand guidelines showcase on a blue background"><figcaption><span>ZENTROBrand</span><span class="project-gallery-type">guideline</span></figcaption></figure></a>
               </div>
             </div>
           </div>
@@ -199,14 +201,14 @@
           <h2 class="carousel-section-title">LANDING PAGES</h2>
         </div>
         <div class="landing-fan" aria-label="Landing page and UI design projects">
-          <a class="landing-fan-card" style="--fan-x:-28vw;--fan-y:12px;--fan-angle:-40deg;--fan-order:1" href="https://www.behance.net/gallery/257968779/ZENTRO" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/zentro-trifold-brochure.jpeg" alt="Zentro recruitment brochure mockup on a blue background"><figcaption>ZENTRO — TRIFOLD BROCHURE</figcaption></figure></a>
-          <a class="landing-fan-card" style="--fan-x:-20vw;--fan-y:-55px;--fan-angle:-30deg;--fan-order:2" href="https://www.behance.net/gallery/257968779/ZENTRO" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/zentro-magazine.jpeg" alt="Zentro workforce magazine and brochure mockups"><figcaption>ZENTRO — MAGAZINE DESIGN</figcaption></figure></a>
-          <a class="landing-fan-card" style="--fan-x:-12vw;--fan-y:-105px;--fan-angle:-20deg;--fan-order:3" href="https://www.behance.net/gallery/257969699/BREWORA" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/brewora-website.jpeg" alt="Brewora coffee shop website shown on a laptop"><figcaption>BREWORA — WEBSITE DESIGN</figcaption></figure></a>
-          <a class="landing-fan-card" style="--fan-x:-4vw;--fan-y:-140px;--fan-angle:-10deg;--fan-order:4" href="https://www.behance.net/gallery/257970221/NIKE-DASHBOARD" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/nike-dashboard.jpeg" alt="Nike store analytics dashboard displayed on a laptop"><figcaption>NIKE — DASHBOARD UI</figcaption></figure></a>
-          <div class="landing-fan-card" style="--fan-x:4vw;--fan-y:-140px;--fan-angle:10deg;--fan-order:5"><figure><img src="images/landing-pages/worker-app-mockup.jpeg" alt="Skilled worker booking app shown on an angled phone mockup"><figcaption>SKILLED WORKERS — APP DESIGN</figcaption></figure></div>
-          <div class="landing-fan-card" style="--fan-x:12vw;--fan-y:-105px;--fan-angle:20deg;--fan-order:6"><figure><img src="images/landing-pages/worker-app-screen.jpeg" alt="Skilled worker services app home screen"><figcaption>SKILLED WORKERS — MOBILE UI</figcaption></figure></div>
-          <a class="landing-fan-card" style="--fan-x:20vw;--fan-y:-55px;--fan-angle:30deg;--fan-order:7" href="https://www.behance.net/gallery/257967849/FARMORA" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/farmora-app.jpeg" alt="Farmora agriculture shopping app on two phones"><figcaption>FARMORA — APP DESIGN</figcaption></figure></a>
-          <a class="landing-fan-card" style="--fan-x:28vw;--fan-y:12px;--fan-angle:40deg;--fan-order:8" href="https://www.behance.net/gallery/253218093/zento" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/zentro-brand-guidelines.jpeg" alt="Zentro brand guidelines cover in blue"><figcaption>ZENTRO — BRAND GUIDELINES</figcaption></figure></a>
+          <a class="landing-fan-card" style="--fan-order:1" href="https://www.behance.net/gallery/257970221/NIKE-DASHBOARD" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/nike-dashboard.jpeg" alt="Nike store analytics dashboard displayed on a laptop"><figcaption>NIKE — DASHBOARD UI</figcaption></figure></a>
+          <div class="landing-fan-card" style="--fan-order:2"><figure><img src="images/landing-pages/worker-app-mockup.jpeg" alt="Skilled worker booking app shown on an angled phone mockup"><figcaption>SKILLED WORKERS — APP DESIGN</figcaption></figure></div>
+          <a class="landing-fan-card" style="--fan-order:3" href="https://www.behance.net/gallery/257969699/BREWORA" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/brewora-website.jpeg" alt="Brewora coffee shop website shown on a laptop"><figcaption>BREWORA — WEBSITE DESIGN</figcaption></figure></a>
+          <a class="landing-fan-card" style="--fan-order:4" href="https://www.behance.net/gallery/257967849/FARMORA" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/farmora-app.jpeg" alt="Farmora agriculture shopping app on two phones"><figcaption>FARMORA — APP DESIGN</figcaption></figure></a>
+          <a class="landing-fan-card" style="--fan-order:5" href="https://www.behance.net/gallery/257968779/ZENTRO" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/zentro-trifold-brochure.jpeg" alt="Zentro recruitment brochure mockup on a blue background"><figcaption>ZENTRO — TRIFOLD BROCHURE</figcaption></figure></a>
+          <a class="landing-fan-card" style="--fan-order:6" href="https://www.behance.net/gallery/257968779/ZENTRO" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/zentro-magazine.jpeg" alt="Zentro workforce magazine and brochure mockups"><figcaption>ZENTRO — MAGAZINE DESIGN</figcaption></figure></a>
+          <div class="landing-fan-card" style="--fan-order:7"><figure><img src="images/landing-pages/worker-app-screen.jpeg" alt="Skilled worker services app home screen"><figcaption>SKILLED WORKERS — MOBILE UI</figcaption></figure></div>
+          <a class="landing-fan-card" style="--fan-order:8" href="https://www.behance.net/gallery/253218093/zento" target="_blank" rel="noreferrer"><figure><img src="images/landing-pages/zentro-brand-guidelines.jpeg" alt="Zentro brand guidelines cover in blue"><figcaption>ZENTRO — BRAND GUIDELINES</figcaption></figure></a>
         </div>
       </div>
     </section>
@@ -311,7 +313,7 @@
   <script src="contact.js" defer></script>
 
   <!-- Application Motion Controller -->
-  <script type="module" src="main.js?v=5"></script>
+  <script type="module" src="main.js?v=8"></script>
 
 </body>
 </html>
