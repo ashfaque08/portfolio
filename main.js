@@ -101,6 +101,31 @@ function easeInOutSine(t) {
 // INITIALIZE EDITORIAL APP
 // ============================================================================
 async function initPortfolio() {
+  const siteNav = document.querySelector('.site-nav');
+  const navMenuToggle = siteNav?.querySelector('.nav-menu-toggle');
+  const mainNavigation = siteNav?.querySelector('#main-navigation');
+
+  if (siteNav && navMenuToggle && mainNavigation) {
+    const setMenuOpen = (isOpen) => {
+      siteNav.classList.toggle('is-menu-open', isOpen);
+      navMenuToggle.setAttribute('aria-expanded', String(isOpen));
+      navMenuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    navMenuToggle.addEventListener('click', () => {
+      setMenuOpen(navMenuToggle.getAttribute('aria-expanded') !== 'true');
+    });
+    mainNavigation.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    });
+    document.addEventListener('pointerdown', (event) => {
+      if (!siteNav.contains(event.target)) setMenuOpen(false);
+    });
+  }
+
   // 1. Sync Configurable Model Name across the DOM
   document.querySelectorAll('.hero-title-main, .footer-model-name, .model-name-sync').forEach(el => {
     el.textContent = MODEL_CONFIG.name;

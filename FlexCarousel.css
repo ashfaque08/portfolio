@@ -161,11 +161,11 @@
   }
 
   .project-gallery-link[data-position="left"] {
-    left: 15%;
+    left: 10%;
   }
 
   .project-gallery-link[data-position="right"] {
-    left: 85%;
+    left: 90%;
   }
 
   .project-gallery-link[data-position="far-right"] {
@@ -174,7 +174,7 @@
   }
 
   .project-gallery-link.is-featured {
-    width: 62vw;
+    width: 78vw;
   }
 
   .project-gallery-card figcaption {
