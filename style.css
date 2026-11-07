@@ -1948,11 +1948,11 @@ body.services-motion-ready .service-accordion-item.is-visible {
 
 @media (max-width: 768px) {
   #portraits-section {
-    padding: 1.5rem 4vw 1rem;
+    padding: 4rem 4vw 2rem;
   }
 
   #portraits-section .carousel-section-header {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
     padding-inline: 0.5rem;
   }
 
